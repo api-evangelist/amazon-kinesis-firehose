@@ -1,0 +1,69 @@
+name: Amazon Kinesis Data Firehose API
+description: Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon OpenSearch Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to match the throughput of your data and requires no ongoing administration.
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://aws.amazon.com/kinesis/data-firehose/
+created: '2024-01-15'
+modified: '2026-03-13'
+apis:
+- name: Amazon Kinesis Data Firehose API
+  description: >-
+    The Amazon Kinesis Data Firehose API provides the easiest way to reliably
+    load streaming data into data lakes, data stores, and analytics services. The
+    API allows you to create and manage delivery streams, configure data
+    transformations using AWS Lambda, set up destinations such as Amazon S3,
+    Amazon Redshift, Amazon OpenSearch Service, and custom HTTP endpoints, and
+    put records into delivery streams. It automatically scales to match your data
+    throughput with no ongoing administration required.
+  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+  humanURL: https://aws.amazon.com/kinesis/data-firehose/
+  baseURL: https://firehose.amazonaws.com
+  tags:
+  - Streaming
+  - Data Delivery
+  - Analytics
+  - AWS
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/firehose/
+  - type: OpenAPI
+    url: openapi/amazon-kinesis-firehose-openapi.yml
+  - type: Pricing
+    url: https://aws.amazon.com/kinesis/data-firehose/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/kinesis/data-firehose/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/kinesis/data-firehose/faqs/
+common:
+- type: Portal
+  url: https://aws.amazon.com/
+- type: Website
+  url: https://aws.amazon.com/kinesis/data-firehose/
+- type: Documentation
+  url: https://docs.aws.amazon.com/firehose/
+- type: Terms of Service
+  url: https://aws.amazon.com/service-terms/
+- type: Privacy Policy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: GitHub Organization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/firehose/
+- type: Sign Up
+  url: https://signin.aws.amazon.com/signup?request_type=register
+- type: Login
+  url: https://aws.amazon.com/console/
+- type: Status
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+tags:
+- Streaming
+- Data Delivery
+- Analytics
+- AWS
