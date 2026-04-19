@@ -1,0 +1,8 @@
+{
+  "DeliveryStreamName": "my-firehose-stream",
+  "DeliveryStreamARN": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DeliveryStreamStatus": "ACTIVE",
+  "DeliveryStreamType": "DirectPut",
+  "CreateTimestamp": "2025-03-15T14:30:00Z",
+  "LastUpdateTimestamp": "2025-03-15T14:30:00Z"
+}

@@ -1,0 +1,58 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Kinesis Data Firehose Workflow
+  description: Unified workflow capability for Amazon Kinesis Data Firehose combining resource management and operations.
+  tags:
+  - Amazon Kinesis Data Firehose
+  - AWS
+  - Workflow
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+capability:
+  consumes:
+  - import: kinesis-firehose
+    location: ./shared/kinesis-firehose.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: kinesis-firehose-api
+    description: REST API for Amazon Kinesis Data Firehose workflow.
+    resources: []
+  - type: mcp
+    port: 9090
+    namespace: kinesis-firehose-mcp
+    transport: http
+    description: MCP server for Amazon Kinesis Data Firehose.
+    tools:
+    - name: delivery-streams-create-delivery-stream
+      description: Creates a Kinesis Data Firehose delivery stream.
+      hints:
+        readOnly: false
+        idempotent: false
+      call: kinesis-firehose.createdeliverystream
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delivery-streams-list-delivery-streams
+      description: Lists your delivery streams in alphabetical order of their names.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-firehose.listdeliverystreams
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delivery-streams-describe-delivery-stream
+      description: Describes the specified delivery stream.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-firehose.describedeliverystream
+      outputParameters:
+      - type: object
+        mapping: $.

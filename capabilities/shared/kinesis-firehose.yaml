@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Kinesis Data Firehose
+  description: Amazon Kinesis Data Firehose API for managing kinesis firehose resources.
+  tags:
+  - Amazon Kinesis Data Firehose
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: kinesis-firehose
+    baseUri: https://firehose.us-east-1.amazonaws.com
+    description: Amazon Kinesis Data Firehose service.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_ACCESS_KEY_ID}}'
+      placement: header
+    resources:
+    - name: delivery-streams
+      path: /delivery-streams
+      description: Firehose delivery stream management
+      operations:
+      - name: createdeliverystream
+        method: POST
+        description: Creates a Kinesis Data Firehose delivery stream.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listdeliverystreams
+        method: GET
+        description: Lists your delivery streams in alphabetical order of their names.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describedeliverystream
+        method: GET
+        description: Describes the specified delivery stream.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8101
+    namespace: kinesis-firehose-rest
+    resources: []
+  - type: mcp
+    port: 9101
+    namespace: kinesis-firehose-mcp
+    transport: http
+    tools:
+    - name: createdeliverystream
+      description: Creates a Kinesis Data Firehose delivery stream.
+      hints:
+        readOnly: false
+        idempotent: false
+      call: kinesis-firehose.createdeliverystream
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listdeliverystreams
+      description: Lists your delivery streams in alphabetical order of their names.
+      hints:
+        readOnly: true
+        idempotent: true
+      call: kinesis-firehose.listdeliverystreams
+      outputParameters:
+      - type: object
+        mapping: $.

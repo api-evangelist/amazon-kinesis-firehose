@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-kinesis-firehose/refs/heads/main/json-schema/amazon-kinesis-firehose-delivery-stream-schema.json",
+  "title": "DeliveryStream",
+  "description": "An Amazon Kinesis Data Firehose delivery stream.",
+  "type": "object",
+  "properties": {
+    "DeliveryStreamName": {
+      "type": "string",
+      "description": "The name of the delivery stream.",
+      "example": "my-firehose-stream"
+    },
+    "DeliveryStreamARN": {
+      "type": "string",
+      "description": "The ARN of the delivery stream."
+    },
+    "DeliveryStreamStatus": {
+      "type": "string",
+      "description": "The status of the delivery stream.",
+      "example": "ACTIVE",
+      "enum": [
+        "CREATING",
+        "CREATING_FAILED",
+        "DELETING",
+        "DELETING_FAILED",
+        "ACTIVE"
+      ]
+    },
+    "DeliveryStreamType": {
+      "type": "string",
+      "description": "The type of the delivery stream.",
+      "example": "DirectPut",
+      "enum": [
+        "DirectPut",
+        "KinesisStreamAsSource",
+        "MSKAsSource"
+      ]
+    },
+    "CreateTimestamp": {
+      "type": "string",
+      "description": "The date and time the delivery stream was created.",
+      "format": "date-time"
+    },
+    "LastUpdateTimestamp": {
+      "type": "string",
+      "description": "The date and time the delivery stream was last updated.",
+      "format": "date-time"
+    }
+  }
+}
