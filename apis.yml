@@ -1,21 +1,19 @@
 name: Amazon Kinesis Data Firehose
-description: Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. It can capture, transform, and deliver streaming data
-  to Amazon S3, Amazon Redshift, Amazon OpenSearch Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to match the throughput of your data and 
-  requires no ongoing administration.
+description: Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores,
+  and analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon OpenSearch
+  Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to match the throughput
+  of your data and requires no ongoing administration.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/kinesis/data-firehose/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: Amazon Kinesis Data Firehose API
-  description: >-
-    The Amazon Kinesis Data Firehose API provides the easiest way to reliably
-    load streaming data into data lakes, data stores, and analytics services. The
-    API allows you to create and manage delivery streams, configure data
-    transformations using AWS Lambda, set up destinations such as Amazon S3,
-    Amazon Redshift, Amazon OpenSearch Service, and custom HTTP endpoints, and
-    put records into delivery streams. It automatically scales to match your data
-    throughput with no ongoing administration required.
+  description: The Amazon Kinesis Data Firehose API provides the easiest way to reliably load streaming data into data lakes,
+    data stores, and analytics services. The API allows you to create and manage delivery streams, configure data transformations
+    using AWS Lambda, set up destinations such as Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and custom HTTP endpoints,
+    and put records into delivery streams. It automatically scales to match your data throughput with no ongoing administration
+    required.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/kinesis/data-firehose/
   baseURL: https://firehose.amazonaws.com
@@ -39,6 +37,8 @@ apis:
     url: json-schema/amazon-kinesis-firehose-delivery-stream-schema.json
   - type: JSONLD
     url: json-ld/amazon-kinesis-firehose-context.jsonld
+  - type: NaftikoCapability
+    url: capabilities/amazon-kinesis-firehose-delivery-streams.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -100,8 +100,6 @@ common:
     description: Send streaming data to Splunk for security and operational analytics.
 - type: SpectralRules
   url: rules/amazon-kinesis-firehose-spectral-rules.yml
-- type: NaftikoCapability
-  url: capabilities/amazon-kinesis-firehose-workflow.yaml
 - type: Vocabulary
   url: vocabulary/amazon-kinesis-firehose-vocabulary.yaml
 maintainers:
