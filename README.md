@@ -1,76 +1,71 @@
 # Amazon Kinesis Data Firehose (amazon-kinesis-firehose)
-Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon OpenSearch Service, Splunk, and any custom HTTP endpoint.
 
-**URL:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
+Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon OpenSearch Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to match the throughput of your data and requires no ongoing administration.
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+**APIs.json:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
 
-## Tags:
+## Tags
 
- - AWS, Streaming, Data, ETL, Kinesis, Firehose
+- Analytics
+- AWS
+- Data Delivery
+- Streaming
 
 ## Timestamps
 
 - **Created:** 2024-01-15
-- **Modified:** 2026-04-19
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Amazon Kinesis Data Firehose API
-The Amazon Kinesis Data Firehose API provides the easiest way to reliably load streaming data into data lakes, data stores, and analytics services.
 
-**Human URL:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
+The Amazon Kinesis Data Firehose API provides the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. The API allows you to create and manage delivery streams, configure data transformations using AWS Lambda, set up destinations such as Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and custom HTTP endpoints, and put records into delivery streams. It automatically scales to match your data throughput with no ongoing administration required.
+
+- **Human URL:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
+- **Base URL:** `https://firehose.amazonaws.com`
+
+#### Tags
+
+- Analytics
+- AWS
+- Data Delivery
+- Streaming
 
 #### Properties
 
-- [OpenAPI](openapi/amazon-kinesis-firehose-openapi.yml)
-- [JSONSchema](json-schema/amazon-kinesis-firehose-delivery-stream-schema.json)
-- [JSONLD](json-ld/amazon-kinesis-firehose-context.jsonld)
+- [Documentation](https://docs.aws.amazon.com/firehose/)
+- [OpenAPI](openapi/amazon-kinesis-firehose-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/amazon-kinesis-firehose.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/amazon-kinesis-firehose.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Pricing](https://aws.amazon.com/kinesis/data-firehose/pricing/)
+- [Getting Started](https://aws.amazon.com/kinesis/data-firehose/getting-started/)
+- [F A Q](https://aws.amazon.com/kinesis/data-firehose/faqs/)
+- [JSON Schema](json-schema/amazon-kinesis-firehose-delivery-stream-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/amazon-kinesis-firehose-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
-## Artifacts
+## Common Properties
 
-### OpenAPI
-
-- [Amazon Kinesis Data Firehose API](openapi/amazon-kinesis-firehose-openapi.yml)
-
-### JSON Schema
-
-- [Delivery Stream](json-schema/amazon-kinesis-firehose-delivery-stream-schema.json)
-
-### JSON Structure
-
-- [Delivery Stream](json-structure/amazon-kinesis-firehose-delivery-stream-structure.json)
-
-### JSON-LD
-
-- [Amazon Kinesis Data Firehose Context](json-ld/amazon-kinesis-firehose-context.jsonld)
-
-### Examples
-
-- [Delivery Stream Example](examples/amazon-kinesis-firehose-delivery-stream-example.json)
-
-## Capabilities
-
-### Shared Per-API Definitions
-
-- [Amazon Kinesis Data Firehose](capabilities/shared/kinesis-firehose.yaml) — 7 operations for streaming data delivery
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon Kinesis Data Firehose Workflow](capabilities/amazon-kinesis-firehose-workflow.yaml) | Kinesis Firehose | 7 | Developer, Administrator |
-
-## Vocabulary
-
-- [Amazon Kinesis Data Firehose Vocabulary](vocabulary/amazon-kinesis-firehose-vocabulary.yaml)
-
-## Rules
-
-- [Amazon Kinesis Data Firehose Spectral Rules](rules/amazon-kinesis-firehose-spectral-rules.yml)
+- [Portal](https://aws.amazon.com/)
+- [Portal](https://aws.amazon.com/kinesis/data-firehose/)
+- [Documentation](https://docs.aws.amazon.com/firehose/)
+- [Terms of Service](https://aws.amazon.com/service-terms/)
+- [Privacy Policy](https://aws.amazon.com/privacy/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [GitHub Organization](https://github.com/aws)
+- [Console](https://console.aws.amazon.com/firehose/)
+- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
+- [Login](https://aws.amazon.com/console/)
+- [Status Page](https://health.aws.amazon.com/health/status)
+- [Contact](https://aws.amazon.com/contact-us/)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
+- [Spectral Rules](rules/amazon-kinesis-firehose-spectral-rules.yml)
+- [Vocabulary](vocabulary/amazon-kinesis-firehose-vocabulary.yaml)
 
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** kin@apievangelist.com
+**URL:** https://apievangelist.com
