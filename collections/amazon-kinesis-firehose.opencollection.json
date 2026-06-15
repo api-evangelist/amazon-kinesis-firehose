@@ -1,0 +1,143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Kinesis Data Firehose API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Delivery Streams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose List Delivery Streams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams"
+          },
+          "docs": "Lists your delivery streams in alphabetical order of their names."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Create Delivery Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams"
+          },
+          "docs": "Creates a Kinesis Data Firehose delivery stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Describe Delivery Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams/:DeliveryStreamName",
+            "params": [
+              {
+                "name": "DeliveryStreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the delivery stream."
+              }
+            ]
+          },
+          "docs": "Describes the specified delivery stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Delete Delivery Stream",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams/:DeliveryStreamName",
+            "params": [
+              {
+                "name": "DeliveryStreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the delivery stream."
+              }
+            ]
+          },
+          "docs": "Deletes a delivery stream and its data."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Update Destination",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams/:DeliveryStreamName/destination",
+            "params": [
+              {
+                "name": "DeliveryStreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the delivery stream."
+              }
+            ]
+          },
+          "docs": "Updates the specified destination of the specified delivery stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Put Record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams/:DeliveryStreamName/records",
+            "params": [
+              {
+                "name": "DeliveryStreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the delivery stream."
+              }
+            ]
+          },
+          "docs": "Writes a single data record into an Amazon Kinesis Data Firehose delivery stream."
+        },
+        {
+          "info": {
+            "name": "Amazon Kinesis Data Firehose Put Record Batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://firehose.us-east-1.amazonaws.com/delivery-streams/:DeliveryStreamName/records/batch",
+            "params": [
+              {
+                "name": "DeliveryStreamName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the delivery stream."
+              }
+            ]
+          },
+          "docs": "Writes multiple data records into a delivery stream in a single call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
