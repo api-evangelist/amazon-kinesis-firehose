@@ -40,6 +40,14 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-kinesis-firehose-context.jsonld
 common:
+  - type: TrustCenter
+    url: security/amazon-kinesis-firehose-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-kinesis-firehose-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-kinesis-firehose-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-kinesis-firehose-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/
   - type: Portal
