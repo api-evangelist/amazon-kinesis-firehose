@@ -40,6 +40,8 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-kinesis-firehose-context.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-kinesis-firehose-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-kinesis-firehose-trust-center.yml
   - type: VulnerabilityDisclosure
