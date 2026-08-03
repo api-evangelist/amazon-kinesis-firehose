@@ -1,0 +1,1376 @@
+{
+  "info": {
+    "_postman_id": "1bbcfc7d-e613-4a99-8d46-cb447356ae8b",
+    "name": "Amazon Kinesis Data Firehose Delivery Streams API",
+    "description": "The Amazon Kinesis Data Firehose API provides programmatic access to manage Kinesis Data Firehose resources.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:47:30.000Z",
+    "updatedAt": "2026-07-28T00:47:30.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1bbcfc7d-e613-4a99-8d46-cb447356ae8b"
+  },
+  "item": [
+    {
+      "name": "delivery-streams",
+      "item": [
+        {
+          "name": "{DeliveryStreamName}",
+          "item": [
+            {
+              "name": "destination",
+              "item": [
+                {
+                  "name": "Amazon Kinesis Data Firehose Update Destination",
+                  "id": "22d5badf-f100-4af2-9f4a-ffbf822c0f52",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/destination",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName",
+                        "destination"
+                      ],
+                      "variable": [
+                        {
+                          "id": "03c5b097-acf4-4ef7-93c3-0c31bf57e650",
+                          "key": "DeliveryStreamName",
+                          "value": "<string>",
+                          "description": "(Required) The name of the delivery stream."
+                        }
+                      ]
+                    },
+                    "description": "Updates the specified destination of the specified delivery stream."
+                  },
+                  "response": [
+                    {
+                      "id": "a9614d54-c3c4-4ab6-9e07-e1fd99e92061",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/destination",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "destination"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-a9614d54-c3c4-4ab6-9e07-e1fd99e92061"
+                    },
+                    {
+                      "id": "0f4e20b8-0cc5-4845-9c6b-3d84a46cba51",
+                      "name": "Bad request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/destination",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "destination"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-0f4e20b8-0cc5-4845-9c6b-3d84a46cba51"
+                    },
+                    {
+                      "id": "81c1fe0f-2bbe-4d79-8802-15f43b0b9495",
+                      "name": "Access denied",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/destination",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "destination"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-81c1fe0f-2bbe-4d79-8802-15f43b0b9495"
+                    },
+                    {
+                      "id": "7ffd184e-60d9-44fe-b163-98fd4ba99498",
+                      "name": "Internal server error",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/destination",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "destination"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-7ffd184e-60d9-44fe-b163-98fd4ba99498"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-22d5badf-f100-4af2-9f4a-ffbf822c0f52"
+                }
+              ],
+              "id": "16a97a93-02bb-4031-9064-394333e8f9a0",
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-16a97a93-02bb-4031-9064-394333e8f9a0"
+            },
+            {
+              "name": "records",
+              "item": [
+                {
+                  "name": "batch",
+                  "item": [
+                    {
+                      "name": "Amazon Kinesis Data Firehose Put Record Batch",
+                      "id": "0a8d522e-40b4-49a5-916d-dce160314cb9",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records/batch",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "records",
+                            "batch"
+                          ],
+                          "variable": [
+                            {
+                              "id": "82058c7e-d92a-49d7-ae1d-7ae2fb60c7ca",
+                              "key": "DeliveryStreamName",
+                              "value": "<string>",
+                              "description": "(Required) The name of the delivery stream."
+                            }
+                          ]
+                        },
+                        "description": "Writes multiple data records into a delivery stream in a single call."
+                      },
+                      "response": [
+                        {
+                          "id": "e375724f-1bea-4804-8ebc-76494b17482e",
+                          "name": "Success",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records/batch",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "delivery-streams",
+                                ":DeliveryStreamName",
+                                "records",
+                                "batch"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "DeliveryStreamName"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T00:47:30.000Z",
+                          "updatedAt": "2026-07-28T00:47:30.000Z",
+                          "uid": "35240-e375724f-1bea-4804-8ebc-76494b17482e"
+                        },
+                        {
+                          "id": "7f21ae3a-ba66-47a5-8d3b-834ad5928718",
+                          "name": "Bad request",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records/batch",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "delivery-streams",
+                                ":DeliveryStreamName",
+                                "records",
+                                "batch"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "DeliveryStreamName"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T00:47:30.000Z",
+                          "updatedAt": "2026-07-28T00:47:30.000Z",
+                          "uid": "35240-7f21ae3a-ba66-47a5-8d3b-834ad5928718"
+                        },
+                        {
+                          "id": "850701b5-ca98-48ae-88be-e13c48ccbc35",
+                          "name": "Access denied",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records/batch",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "delivery-streams",
+                                ":DeliveryStreamName",
+                                "records",
+                                "batch"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "DeliveryStreamName"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Forbidden",
+                          "code": 403,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T00:47:30.000Z",
+                          "updatedAt": "2026-07-28T00:47:30.000Z",
+                          "uid": "35240-850701b5-ca98-48ae-88be-e13c48ccbc35"
+                        },
+                        {
+                          "id": "c78d4175-2e2c-49fb-96ce-7b9a32bf15fe",
+                          "name": "Internal server error",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records/batch",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "delivery-streams",
+                                ":DeliveryStreamName",
+                                "records",
+                                "batch"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "DeliveryStreamName"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T00:47:30.000Z",
+                          "updatedAt": "2026-07-28T00:47:30.000Z",
+                          "uid": "35240-c78d4175-2e2c-49fb-96ce-7b9a32bf15fe"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-0a8d522e-40b4-49a5-916d-dce160314cb9"
+                    }
+                  ],
+                  "id": "b2a2fa42-b371-4934-b834-8b69e915162e",
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-b2a2fa42-b371-4934-b834-8b69e915162e"
+                },
+                {
+                  "name": "Amazon Kinesis Data Firehose Put Record",
+                  "id": "c8211461-47e0-47f2-a13c-dc6d5a69ebc3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName",
+                        "records"
+                      ],
+                      "variable": [
+                        {
+                          "id": "4407a73b-1492-4fc0-93e9-6caf818487a0",
+                          "key": "DeliveryStreamName",
+                          "value": "<string>",
+                          "description": "(Required) The name of the delivery stream."
+                        }
+                      ]
+                    },
+                    "description": "Writes a single data record into an Amazon Kinesis Data Firehose delivery stream."
+                  },
+                  "response": [
+                    {
+                      "id": "ceeacc42-d463-4f7b-8a5d-af470a354154",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "records"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-ceeacc42-d463-4f7b-8a5d-af470a354154"
+                    },
+                    {
+                      "id": "19227aa0-822d-42fc-9c87-289a03d29655",
+                      "name": "Bad request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "records"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-19227aa0-822d-42fc-9c87-289a03d29655"
+                    },
+                    {
+                      "id": "0c337ea2-822d-4bdb-bbc8-7307e92c37ed",
+                      "name": "Access denied",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "records"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-0c337ea2-822d-4bdb-bbc8-7307e92c37ed"
+                    },
+                    {
+                      "id": "726a5242-8a4d-4de4-9b9c-e14be32bbbab",
+                      "name": "Internal server error",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName/records",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "delivery-streams",
+                            ":DeliveryStreamName",
+                            "records"
+                          ],
+                          "variable": [
+                            {
+                              "key": "DeliveryStreamName"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:47:30.000Z",
+                      "updatedAt": "2026-07-28T00:47:30.000Z",
+                      "uid": "35240-726a5242-8a4d-4de4-9b9c-e14be32bbbab"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-c8211461-47e0-47f2-a13c-dc6d5a69ebc3"
+                }
+              ],
+              "id": "3d71327f-277d-4bd7-b3cf-89255a55209b",
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-3d71327f-277d-4bd7-b3cf-89255a55209b"
+            },
+            {
+              "name": "Amazon Kinesis Data Firehose Describe Delivery Stream",
+              "id": "1aba568b-acd9-48ba-ad78-21e31b3950fd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams",
+                    ":DeliveryStreamName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b7051871-4181-4d57-95a0-d85ef8404956",
+                      "key": "DeliveryStreamName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the delivery stream."
+                    }
+                  ]
+                },
+                "description": "Describes the specified delivery stream."
+              },
+              "response": [
+                {
+                  "id": "d2d8d305-9c00-402f-a196-344ce7cce2a3",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-d2d8d305-9c00-402f-a196-344ce7cce2a3"
+                },
+                {
+                  "id": "45b3dc8e-63cb-44a9-8b5e-a33670cad080",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-45b3dc8e-63cb-44a9-8b5e-a33670cad080"
+                },
+                {
+                  "id": "84ce99a6-b2ae-47fa-a745-79293f15aae9",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-84ce99a6-b2ae-47fa-a745-79293f15aae9"
+                },
+                {
+                  "id": "b9a27b27-d99b-4dbd-87ef-cd6050a84e46",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-b9a27b27-d99b-4dbd-87ef-cd6050a84e46"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-1aba568b-acd9-48ba-ad78-21e31b3950fd"
+            },
+            {
+              "name": "Amazon Kinesis Data Firehose Delete Delivery Stream",
+              "id": "f275e64b-ba70-4c4b-88d4-0affdac190c0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams",
+                    ":DeliveryStreamName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "2f8c7daa-209c-4f2d-8737-451b3dfdd668",
+                      "key": "DeliveryStreamName",
+                      "value": "<string>",
+                      "description": "(Required) The name of the delivery stream."
+                    }
+                  ]
+                },
+                "description": "Deletes a delivery stream and its data."
+              },
+              "response": [
+                {
+                  "id": "0ea50eba-e257-434a-bf54-206c28cf2e9d",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-0ea50eba-e257-434a-bf54-206c28cf2e9d"
+                },
+                {
+                  "id": "98bb8053-32c0-425f-91bd-2c349c8e5be3",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-98bb8053-32c0-425f-91bd-2c349c8e5be3"
+                },
+                {
+                  "id": "bb82696b-9512-497a-82ce-facac380d176",
+                  "name": "Access denied",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-bb82696b-9512-497a-82ce-facac380d176"
+                },
+                {
+                  "id": "6c34e781-c613-4997-9285-c303cafda289",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/delivery-streams/:DeliveryStreamName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "delivery-streams",
+                        ":DeliveryStreamName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "DeliveryStreamName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:47:30.000Z",
+                  "updatedAt": "2026-07-28T00:47:30.000Z",
+                  "uid": "35240-6c34e781-c613-4997-9285-c303cafda289"
+                }
+              ],
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-f275e64b-ba70-4c4b-88d4-0affdac190c0"
+            }
+          ],
+          "id": "09e2735f-7b24-4eaf-98d8-72a218a7f5a9",
+          "createdAt": "2026-07-28T00:47:30.000Z",
+          "updatedAt": "2026-07-28T00:47:30.000Z",
+          "uid": "35240-09e2735f-7b24-4eaf-98d8-72a218a7f5a9"
+        },
+        {
+          "name": "Amazon Kinesis Data Firehose Create Delivery Stream",
+          "id": "280e21f9-17fd-4428-9a99-9ca8480ec2fa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/delivery-streams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "delivery-streams"
+              ]
+            },
+            "description": "Creates a Kinesis Data Firehose delivery stream."
+          },
+          "response": [
+            {
+              "id": "6e03a0d3-96a3-4e5c-b64d-a3f12e0a6e78",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-6e03a0d3-96a3-4e5c-b64d-a3f12e0a6e78"
+            },
+            {
+              "id": "67bebb4c-8e19-4565-8495-fed56e17fe1a",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-67bebb4c-8e19-4565-8495-fed56e17fe1a"
+            },
+            {
+              "id": "0e4b3128-99dc-45a8-ad9a-59f0af95f4a8",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-0e4b3128-99dc-45a8-ad9a-59f0af95f4a8"
+            },
+            {
+              "id": "30914cda-4082-480d-9409-01be1f82d9fd",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-30914cda-4082-480d-9409-01be1f82d9fd"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:30.000Z",
+          "updatedAt": "2026-07-28T00:47:30.000Z",
+          "uid": "35240-280e21f9-17fd-4428-9a99-9ca8480ec2fa"
+        },
+        {
+          "name": "Amazon Kinesis Data Firehose List Delivery Streams",
+          "id": "8153cbda-6dc6-48e1-b1e9-07e9e9b09af2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/delivery-streams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "delivery-streams"
+              ]
+            },
+            "description": "Lists your delivery streams in alphabetical order of their names."
+          },
+          "response": [
+            {
+              "id": "50c429b6-5581-4db0-9171-22b2fa5081ba",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-50c429b6-5581-4db0-9171-22b2fa5081ba"
+            },
+            {
+              "id": "ab149eb6-bc81-4616-b169-762be5d06b0e",
+              "name": "Bad request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-ab149eb6-bc81-4616-b169-762be5d06b0e"
+            },
+            {
+              "id": "fb128997-0990-4ed3-85e2-008d1d915724",
+              "name": "Access denied",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-fb128997-0990-4ed3-85e2-008d1d915724"
+            },
+            {
+              "id": "6be2c173-d9ac-4b7f-99b8-6ecdb87bf309",
+              "name": "Internal server error",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/delivery-streams",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "delivery-streams"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:47:30.000Z",
+              "updatedAt": "2026-07-28T00:47:30.000Z",
+              "uid": "35240-6be2c173-d9ac-4b7f-99b8-6ecdb87bf309"
+            }
+          ],
+          "createdAt": "2026-07-28T00:47:30.000Z",
+          "updatedAt": "2026-07-28T00:47:30.000Z",
+          "uid": "35240-8153cbda-6dc6-48e1-b1e9-07e9e9b09af2"
+        }
+      ],
+      "id": "3737e3ff-948a-4bd2-9d02-d6179dab3bcb",
+      "createdAt": "2026-07-28T00:47:30.000Z",
+      "updatedAt": "2026-07-28T00:47:30.000Z",
+      "uid": "35240-3737e3ff-948a-4bd2-9d02-d6179dab3bcb"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://firehose.us-east-1.amazonaws.com"
+    }
+  ]
+}

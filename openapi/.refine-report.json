@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-kinesis-firehose",
+  "sources": [
+    "amazon-kinesis-firehose-delivery-streams-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-kinesis-firehose-delivery-streams-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

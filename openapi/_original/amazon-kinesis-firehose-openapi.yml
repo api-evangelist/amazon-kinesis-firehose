@@ -1,0 +1,233 @@
+openapi: 3.1.0
+info:
+  title: Amazon Kinesis Data Firehose API
+  description: The Amazon Kinesis Data Firehose API provides programmatic access to manage Kinesis Data Firehose resources.
+  version: '2024-01-01'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://firehose.us-east-1.amazonaws.com
+  description: Amazon Kinesis Data Firehose endpoint
+security:
+- sigv4: []
+tags:
+- name: Delivery Streams
+  description: Firehose delivery stream management
+paths:
+  /delivery-streams:
+    post:
+      operationId: CreateDeliveryStream
+      summary: Amazon Kinesis Data Firehose Create Delivery Stream
+      description: Creates a Kinesis Data Firehose delivery stream.
+      tags:
+      - Delivery Streams
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+    get:
+      operationId: ListDeliveryStreams
+      summary: Amazon Kinesis Data Firehose List Delivery Streams
+      description: Lists your delivery streams in alphabetical order of their names.
+      tags:
+      - Delivery Streams
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /delivery-streams/{DeliveryStreamName}:
+    get:
+      operationId: DescribeDeliveryStream
+      summary: Amazon Kinesis Data Firehose Describe Delivery Stream
+      description: Describes the specified delivery stream.
+      tags:
+      - Delivery Streams
+      parameters:
+      - name: DeliveryStreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the delivery stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+    delete:
+      operationId: DeleteDeliveryStream
+      summary: Amazon Kinesis Data Firehose Delete Delivery Stream
+      description: Deletes a delivery stream and its data.
+      tags:
+      - Delivery Streams
+      parameters:
+      - name: DeliveryStreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the delivery stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /delivery-streams/{DeliveryStreamName}/destination:
+    put:
+      operationId: UpdateDestination
+      summary: Amazon Kinesis Data Firehose Update Destination
+      description: Updates the specified destination of the specified delivery stream.
+      tags:
+      - Delivery Streams
+      parameters:
+      - name: DeliveryStreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the delivery stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /delivery-streams/{DeliveryStreamName}/records:
+    post:
+      operationId: PutRecord
+      summary: Amazon Kinesis Data Firehose Put Record
+      description: Writes a single data record into an Amazon Kinesis Data Firehose delivery stream.
+      tags:
+      - Delivery Streams
+      parameters:
+      - name: DeliveryStreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the delivery stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /delivery-streams/{DeliveryStreamName}/records/batch:
+    post:
+      operationId: PutRecordBatch
+      summary: Amazon Kinesis Data Firehose Put Record Batch
+      description: Writes multiple data records into a delivery stream in a single call.
+      tags:
+      - Delivery Streams
+      parameters:
+      - name: DeliveryStreamName
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The name of the delivery stream.
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad request
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication
+  schemas:
+    DeliveryStream:
+      type: object
+      description: An Amazon Kinesis Data Firehose delivery stream.
+      properties:
+        DeliveryStreamName:
+          type: string
+          description: The name of the delivery stream.
+          example: my-firehose-stream
+        DeliveryStreamARN:
+          type: string
+          description: The ARN of the delivery stream.
+        DeliveryStreamStatus:
+          type: string
+          description: The status of the delivery stream.
+          example: ACTIVE
+          enum:
+          - CREATING
+          - CREATING_FAILED
+          - DELETING
+          - DELETING_FAILED
+          - ACTIVE
+        DeliveryStreamType:
+          type: string
+          description: The type of the delivery stream.
+          example: DirectPut
+          enum:
+          - DirectPut
+          - KinesisStreamAsSource
+          - MSKAsSource
+        CreateTimestamp:
+          type: string
+          description: The date and time the delivery stream was created.
+          format: date-time
+        LastUpdateTimestamp:
+          type: string
+          description: The date and time the delivery stream was last updated.
+          format: date-time
