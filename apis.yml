@@ -4,6 +4,18 @@ description: >-
   analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon
   OpenSearch Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to
   match the throughput of your data and requires no ongoing administration.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium
