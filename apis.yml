@@ -141,3 +141,5 @@ tags:
   - AWS
   - Data Delivery
   - Streaming
+x-parent: aws
+x-relationship: product
