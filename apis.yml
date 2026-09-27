@@ -60,7 +60,7 @@ apis:
     url: json-ld/amazon-kinesis-firehose-context.jsonld
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/firehose/
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-kinesis-data-firehose/overview
 - type: AgenticAccess
@@ -148,5 +148,5 @@ tags:
 - AWS
 - Data Delivery
 - Streaming
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
