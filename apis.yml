@@ -59,6 +59,12 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-kinesis-firehose-context.jsonld
 common:
+- type: Plans
+  url: plans/amazon-kinesis-firehose-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-kinesis-firehose-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-kinesis-firehose-finops.yml
 - type: Website
   url: https://aws.amazon.com/firehose/
 - type: PostmanWorkspace
