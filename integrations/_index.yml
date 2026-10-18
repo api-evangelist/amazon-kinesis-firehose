@@ -51,5 +51,5 @@
     - connectors/events/amazon-kinesis-firehose
     vendor_link: https://aws.amazon.com/kinesis/data-firehose/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
