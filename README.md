@@ -1,4 +1,4 @@
-# Amazon Kinesis Data Firehose (amazon-kinesis-firehose)
+# Amazon Kinesis Data Firehose
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,70 +66,162 @@
 
 Amazon Kinesis Data Firehose is the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. It can capture, transform, and deliver streaming data to Amazon S3, Amazon Redshift, Amazon OpenSearch Service, Splunk, and any custom HTTP endpoint. It is a fully managed service that automatically scales to match the throughput of your data and requires no ongoing administration.
 
-**APIs.json:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
+**Areas:** Analytics · AWS · Data Delivery · Streaming
 
-## Tags
+## Amazon Kinesis Data Firehose on APIs.io
 
-- Analytics
-- AWS
-- Data Delivery
-- Streaming
+Everything profiled for Amazon Kinesis Data Firehose is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-kinesis-firehose/](https://apis.io/providers/amazon-kinesis-firehose/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (2)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Kinesis Data Firehose Delivery Streams API](https://apis.io/apis/amazon-kinesis-firehose/amazon-kinesis-firehose-delivery-streams-api/) — Firehose delivery stream management
+- [Amazon Kinesis Data Firehose Kinesis Firehose Operations API](https://apis.io/apis/amazon-kinesis-firehose/amazon-kinesis-firehose-operations-api/) — The Kinesis Firehose Operations API from Amazon Kinesis Data Firehose — 3 operation(s) for kinesis firehose operations.
 
-## APIs
+### Published properties
 
-### Amazon Kinesis Data Firehose API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The Amazon Kinesis Data Firehose API provides the easiest way to reliably load streaming data into data lakes, data stores, and analytics services. The API allows you to create and manage delivery streams, configure data transformations using AWS Lambda, set up destinations such as Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and custom HTTP endpoints, and put records into delivery streams. It automatically scales to match your data throughput with no ongoing administration required.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/kinesis/data-firehose/](https://aws.amazon.com/kinesis/data-firehose/)
-- **Base URL:** `https://firehose.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Kinesis Firehose Agentic Access](https://apis.io/agentic-access/amazon-kinesis-firehose/amazon-kinesis-firehose-agentic-access/)
 
-- Analytics
-- AWS
-- Data Delivery
-- Streaming
+#### JSON Schema (1)
 
-#### Properties
+The data models the API reads and writes.
 
+- [DeliveryStream](https://apis.io/schemas/amazon-kinesis-firehose/amazon-kinesis-firehose-delivery-stream/)
+
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Kinesis Firehose Delivery Stream Structure](https://apis.io/json-structure/amazon-kinesis-firehose/amazon-kinesis-firehose-delivery-stream-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Kinesis Firehose Context](https://apis.io/jsonld/amazon-kinesis-firehose/amazon-kinesis-firehose-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Kinesis Firehose Vocabulary](https://apis.io/vocabularies/amazon-kinesis-firehose/amazon-kinesis-firehose-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Amazon Kinesis Firehose Delivery Stream Example](https://apis.io/examples/amazon-kinesis-firehose/amazon-kinesis-firehose-delivery-stream-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Amazon Kinesis Data Firehose API](https://apis.io/collections/amazon-kinesis-firehose/open-amazon-kinesis-firehose/)
+- [Amazon Kinesis Data Firehose Delivery Streams API](https://apis.io/collections/amazon-kinesis-firehose/open-amazon-kinesis-firehose-delivery-streams-api/)
+- [Amazon Kinesis Data Firehose Delivery Streams API](https://apis.io/collections/amazon-kinesis-firehose/postman-amazon-kinesis-firehose-delivery-streams-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Kinesis Data Firehose — jsonschema rules](https://apis.io/rules/amazon-kinesis-firehose/amazon-kinesis-firehose-jsonschema-spectral-rules/)
+- [Amazon Kinesis Data Firehose API Rules](https://apis.io/rules/amazon-kinesis-firehose/amazon-kinesis-firehose-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Kinesis Firehose Authentication](https://apis.io/security/amazon-kinesis-firehose/amazon-kinesis-firehose-authentication/)
+- [Amazon Kinesis Firehose Domain Security](https://apis.io/security/amazon-kinesis-firehose/amazon-kinesis-firehose-domain-security/)
+- [Amazon Kinesis Firehose Trust Center](https://apis.io/security/amazon-kinesis-firehose/amazon-kinesis-firehose-trust-center/)
+- [Amazon Kinesis Firehose Vulnerability Disclosure](https://apis.io/security/amazon-kinesis-firehose/amazon-kinesis-firehose-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Kinesis Firehose Plans Pricing](https://apis.io/plans/amazon-kinesis-firehose/amazon-kinesis-firehose-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Kinesis Firehose Rate Limits](https://apis.io/rate-limits/amazon-kinesis-firehose/amazon-kinesis-firehose-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Kinesis Firehose Finops](https://apis.io/finops/amazon-kinesis-firehose/amazon-kinesis-firehose-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/firehose/)
 - [Documentation](https://docs.aws.amazon.com/firehose/)
-- [OpenAPI](openapi/amazon-kinesis-firehose-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/amazon-kinesis-firehose.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-kinesis-firehose.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Pricing](https://aws.amazon.com/kinesis/data-firehose/pricing/)
-- [Getting Started](https://aws.amazon.com/kinesis/data-firehose/getting-started/)
-- [F A Q](https://aws.amazon.com/kinesis/data-firehose/faqs/)
-- [JSON Schema](json-schema/amazon-kinesis-firehose-delivery-stream-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/amazon-kinesis-firehose-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-## Common Properties
-
-- [Portal](https://aws.amazon.com/)
-- [Portal](https://aws.amazon.com/kinesis/data-firehose/)
-- [Documentation](https://docs.aws.amazon.com/firehose/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/firehose/)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [Spectral Rules](rules/amazon-kinesis-firehose-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-kinesis-firehose-vocabulary.yaml)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 53.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 58.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 56.0 |
+| Access clarity | 53.9 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-kinesis-firehose/](https://apis.io/providers/amazon-kinesis-firehose/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Kinesis Data Firehose: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-kinesis-firehose/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
