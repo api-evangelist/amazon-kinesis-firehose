@@ -1,0 +1,213 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/firehose/pricing/
+sources:
+- https://aws.amazon.com/firehose/pricing/
+- https://aws.amazon.com/kinesis/data-firehose/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: Main pricing tables render via JS tokens (unresolved in text); numeric rates captured come from
+  the page's 'Pricing examples' section. Tiers above 5 PB/month are 'Contact Us'.
+plan_count: 13
+currency: USD
+plans:
+- name: Ingestion — Direct PUT and KDS as a source, first 500 TB / month
+  price_text: Price for first 500 TB / month = $0.029 per GB
+  price: 0.029
+  currency: USD
+  period: per-use
+  unit: per GB ingested (5KB increments)
+- name: Ingestion — MSK as a source, first 500 TB / month
+  price_text: Price for first 500 TB / month = $0.055 per GB
+  price: 0.055
+  currency: USD
+  period: per-use
+  unit: per GB ingested
+- name: Ingestion — Vended Logs as a source, first 500 TB / month
+  price_text: Price for first 500 TB / month = $0.13 per GB
+  price: 0.13
+  currency: USD
+  period: per-use
+  unit: per GB ingested
+- name: Snowflake as a destination
+  price_text: Price per GB delivered to Snowflake = $0.071 per GB
+  price: 0.071
+  currency: USD
+  period: per-use
+  unit: per GB delivered
+- name: Apache Iceberg Tables as a destination (from KDS source)
+  price_text: Price per GB delivered to Apache Iceberg Tables from Kinesis Data Streams as a source =
+    $0.045 per GB
+  price: 0.045
+  currency: USD
+  period: per-use
+  unit: per GB delivered
+- name: Format conversion (JSON to Parquet or ORC)
+  price_text: Price per ingested GB converted = $0.018
+  price: 0.018
+  currency: USD
+  period: per-use
+  unit: per GB converted
+- name: VPC delivery — per GB
+  price_text: Price per GB delivered to the destination in VPC = $0.01
+  price: 0.01
+  currency: USD
+  period: per-use
+  unit: per GB delivered to VPC
+- name: VPC delivery — per AZ hour
+  price_text: Price per AZ hour for VPC delivery = $0.01
+  price: 0.01
+  currency: USD
+  period: per-use
+  unit: per AZ hour
+- name: Dynamic Partitioning — data processed
+  price_text: Price per GB processed through Dynamic Partitioning = $0.020
+  price: 0.02
+  currency: USD
+  period: per-use
+  unit: per GB processed
+- name: Dynamic Partitioning — S3 objects delivered
+  price_text: Price per 1,000 S3 objects delivered $0.005 = $0.005
+  currency: USD
+  period: per-use
+  unit: per 1,000 S3 objects
+- name: Dynamic Partitioning — JQ processing
+  price_text: Price per JQ processing hour = $0.07
+  price: 0.07
+  currency: USD
+  period: per-use
+  unit: per JQ processing hour
+- name: Decompression of CloudWatch Logs
+  price_text: Price per GB decompressed = $0.00325/GB in IAD
+  price: 0.00325
+  currency: USD
+  period: per-use
+  unit: per GB decompressed
+- name: Over 5 PB / month
+  price_text: Contact Us
+  period: per-use
+  unit: per GB ingested
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - compute
+  - data
+  plans:
+  - name: Ingestion — Direct PUT and KDS as a source, first 500 TB / month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Ingestion — MSK as a source, first 500 TB / month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Ingestion — Vended Logs as a source, first 500 TB / month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Snowflake as a destination
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Apache Iceberg Tables as a destination (from KDS source)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Format conversion (JSON to Parquet or ORC)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: VPC delivery — per GB
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: VPC delivery — per AZ hour
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Dynamic Partitioning — data processed
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Dynamic Partitioning — S3 objects delivered
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Dynamic Partitioning — JQ processing
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Decompression of CloudWatch Logs
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Over 5 PB / month
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
